@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Sheet — In Green</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a1a; color: #fff; font-family: 'Inter', sans-serif; padding: 40px 20px; }
+    h1 { text-align: center; font-size: 1.4rem; font-weight: 400; margin-bottom: 8px; letter-spacing: 0.05em; }
+    p.sub { text-align: center; font-size: 0.8rem; color: #888; margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; max-width: 1400px; margin: 0 auto; }
+    .cell { position: relative; }
+    .cell img { width: 100%; display: block; border: 2px solid transparent; transition: border-color 0.2s; }
+    .cell:hover img { border-color: #fff; }
+    .cell .num { position: absolute; top: 8px; left: 8px; background: rgba(0,0,0,0.75); color: #fff; font-size: 0.75rem; padding: 2px 8px; border-radius: 2px; font-weight: 600; }
+    .cell .name { font-size: 0.65rem; color: #999; margin-top: 4px; text-align: center; word-break: break-all; }
+    .cell.cut { opacity: 0.4; }
+    .cell.cut .num { background: rgba(180,0,0,0.8); }
+  </style>
+</head>
+<body>
+  <h1>In Green — Contact Sheet</h1>
+  <p class="sub">28 photos &middot; 27 selected &middot; 1 cut (dimmed) &middot; Use numbers to adjust</p>
+  <div class="grid">
+    <div class="cell"><span class="num">1</span><img src="images/in-green/DSC00871.jpg" loading="lazy"><div class="name">DSC00871.jpg</div></div>
+    <div class="cell"><span class="num">2</span><img src="images/in-green/DSC00889.jpg" loading="lazy"><div class="name">DSC00889.jpg</div></div>
+    <div class="cell"><span class="num">3</span><img src="images/in-green/DSC01264.jpg" loading="lazy"><div class="name">DSC01264.jpg</div></div>
+    <div class="cell"><span class="num">4</span><img src="images/in-green/DSC01339.jpg" loading="lazy"><div class="name">DSC01339.jpg</div></div>
+    <div class="cell"><span class="num">5</span><img src="images/in-green/DSC01406.jpg" loading="lazy"><div class="name">DSC01406.jpg</div></div>
+    <div class="cell"><span class="num">6</span><img src="images/in-green/DSC01421.jpg" loading="lazy"><div class="name">DSC01421.jpg</div></div>
+    <div class="cell"><span class="num">7</span><img src="images/in-green/DSC01425.jpg" loading="lazy"><div class="name">DSC01425.jpg</div></div>
+    <div class="cell"><span class="num">8</span><img src="images/in-green/DSC01673.jpg" loading="lazy"><div class="name">DSC01673.jpg</div></div>
+    <div class="cell"><span class="num">9</span><img src="images/in-green/DSC01684.jpg" loading="lazy"><div class="name">DSC01684.jpg</div></div>
+    <div class="cell"><span class="num">10</span><img src="images/in-green/DSC01756.jpg" loading="lazy"><div class="name">DSC01756.jpg</div></div>
+    <div class="cell"><span class="num">11</span><img src="images/in-green/DSC01807.jpg" loading="lazy"><div class="name">DSC01807.jpg</div></div>
+    <div class="cell"><span class="num">12</span><img src="images/in-green/DSC01858.jpg" loading="lazy"><div class="name">DSC01858.jpg</div></div>
+    <div class="cell"><span class="num">13</span><img src="images/in-green/DSC02014.jpg" loading="lazy"><div class="name">DSC02014.jpg</div></div>
+    <div class="cell"><span class="num">14</span><img src="images/in-green/DSC04472-2.jpg" loading="lazy"><div class="name">DSC04472-2.jpg</div></div>
+    <div class="cell"><span class="num">15</span><img src="images/in-green/DSC04836.jpg" loading="lazy"><div class="name">DSC04836.jpg</div></div>
+    <div class="cell"><span class="num">16</span><img src="images/in-green/DSC05958.jpg" loading="lazy"><div class="name">DSC05958.jpg</div></div>
+    <div class="cell"><span class="num">17</span><img src="images/in-green/DSC05967.jpg" loading="lazy"><div class="name">DSC05967.jpg</div></div>
+    <div class="cell"><span class="num">18</span><img src="images/in-green/DSC05985.jpg" loading="lazy"><div class="name">DSC05985.jpg</div></div>
+    <div class="cell"><span class="num">19</span><img src="images/in-green/DSC05995.jpg" loading="lazy"><div class="name">DSC05995.jpg</div></div>
+    <div class="cell"><span class="num">20</span><img src="images/in-green/DSC06006.jpg" loading="lazy"><div class="name">DSC06006.jpg</div></div>
+    <div class="cell"><span class="num">21</span><img src="images/in-green/DSC06012.jpg" loading="lazy"><div class="name">DSC06012.jpg</div></div>
+    <div class="cell"><span class="num">22</span><img src="images/in-green/DSC06111.jpg" loading="lazy"><div class="name">DSC06111.jpg</div></div>
+    <div class="cell"><span class="num">23</span><img src="images/in-green/DSC06113.jpg" loading="lazy"><div class="name">DSC06113.jpg</div></div>
+    <div class="cell"><span class="num">24</span><img src="images/in-green/DSC07043.jpg" loading="lazy"><div class="name">DSC07043.jpg</div></div>
+    <div class="cell"><span class="num">25</span><img src="images/in-green/DSC07291.jpg" loading="lazy"><div class="name">DSC07291.jpg</div></div>
+    <div class="cell"><span class="num">26</span><img src="images/in-green/DSC07447.jpg" loading="lazy"><div class="name">DSC07447.jpg</div></div>
+    <div class="cell cut"><span class="num">27</span><img src="images/in-green/DSC09374.jpg" loading="lazy"><div class="name">DSC09374.jpg — CUT (no green)</div></div>
+    <div class="cell"><span class="num">28</span><img src="images/in-green/R0000024.jpg" loading="lazy"><div class="name">R0000024.jpg</div></div>
+  </div>
+</body>
+</html>

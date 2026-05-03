@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Petra Radiyeh</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- JOURNEY TIMELINE (UI-1 INSPIRED) ---- */
+    .timeline-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 24px 80px;
+      background: var(--gray-100);
+    }
+
+    .timeline-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .timeline-subtitle {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      text-align: center;
+      margin-bottom: 80px;
+      letter-spacing: 0.05em;
+    }
+
+    .timeline-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    /* The organic winding path */
+    .timeline-path {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      transform: translateX(-50%);
+    }
+
+    .timeline-path svg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 100%;
+    }
+
+    .timeline-path svg path {
+      fill: none;
+      stroke: var(--black);
+      stroke-width: 1.5;
+    }
+
+    /* Timeline entries */
+    .timeline-entry {
+      position: relative;
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding: 40px 0;
+    }
+
+    .timeline-entry:first-child {
+      padding-top: 0;
+    }
+
+    .timeline-entry:last-child {
+      padding-bottom: 0;
+    }
+
+    /* Alternate left and right */
+    .timeline-entry.left {
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: calc(50% + 32px);
+      text-align: right;
+    }
+
+    .timeline-entry.right {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: calc(50% + 32px);
+      text-align: left;
+    }
+
+    /* The dot on the line */
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background: var(--black);
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .timeline-entry:first-child::before {
+      top: 20px;
+      transform: translate(-50%, 0);
+    }
+
+    .timeline-entry:last-child::before {
+      top: auto;
+      bottom: 20px;
+      transform: translate(-50%, 0);
+    }
+
+    .timeline-years {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--gray-400);
+      white-space: nowrap;
+      letter-spacing: 0.03em;
+    }
+
+    .timeline-place {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      letter-spacing: 0.02em;
+    }
+
+    .timeline-detail {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--gray-400);
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    /* The vertical line behind entries */
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      border-left: 1.5px solid var(--black);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    /* Organic curve overlay — drawn with SVG in the HTML */
+    .timeline-svg-line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .timeline-footer {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .timeline-footer a {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      border-bottom: 1px solid var(--gray-200);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .timeline-footer a:hover {
+      color: var(--black);
+      border-color: var(--black);
+    }
+
+    @media (max-width: 600px) {
+      .timeline-entry.left {
+        padding-right: 0;
+        padding-left: calc(50% + 24px);
+        text-align: left;
+        justify-content: flex-start;
+      }
+      .timeline-entry.right {
+        padding-left: calc(50% + 24px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Petra Radiyeh</a>
+    <ul class="nav-links">
+      <li><a href="in-transit.html">In Transit</a></li>
+      <li><a href="in-green.html">In Green</a></li>
+      <li><a href="common-grounds.html">Common Grounds</a></li>
+      <li><a href="moving-image.html">Moving Image</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="timeline-page">
+
+      <h1 class="timeline-title">Petra Radiyeh</h1>
+      <p class="timeline-subtitle">Documentary Photographer and Filmmaker</p>
+
+      <p class="timeline-bio">My work is a sustained attempt to find what is universal inside what is personal. Observation is my instinct: the frame arrests my attention; the photograph bounds a moment that comes alive only in retrospect. When I sit with my images afterward, they tell me things beyond what instinct captured &mdash; contradictions I hadn&rsquo;t noticed, questions I hadn&rsquo;t thought to ask. My films are born from the same instinct: an inquiry-driven practice that moves between individual lives and the forces shaping them, turning the lens outward as a way of turning it inward.</p>
+
+      <div class="timeline-container">
+        <!-- Vertical organic line -->
+        <svg class="timeline-svg-line" viewBox="0 0 600 680" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 300 20
+                   C 300 80, 280 100, 290 140
+                   S 320 180, 310 230
+                   C 300 280, 280 290, 290 340
+                   S 330 390, 310 440
+                   C 290 490, 300 510, 300 560
+                   S 300 620, 300 660"
+                fill="none" stroke="#0a0a0a" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        </svg>
+
+        <!-- Top: most recent — Canada -->
+        <div class="timeline-entry right">
+          <div>
+            <span class="timeline-years">2021 &ndash; today</span>
+            <span class="timeline-place">Canada</span>
+          </div>
+        </div>
+
+        <!-- Lebanon -->
+        <div class="timeline-entry left">
+          <div>
+            <span class="timeline-years">2014 &ndash; 2021</span>
+            <span class="timeline-place">Lebanon</span>
+          </div>
+        </div>
+
+        <!-- Egypt -->
+        <div class="timeline-entry right">
+          <div>
+            <span class="timeline-years">2012 &ndash; 2013</span>
+            <span class="timeline-place">Egypt</span>
+          </div>
+        </div>
+
+        <!-- Syria -->
+        <div class="timeline-entry left">
+          <div>
+            <span class="timeline-years">2011 &ndash; 2012</span>
+            <span class="timeline-place">Syria</span>
+          </div>
+        </div>
+
+        <!-- Bottom: origin — Libya -->
+        <div class="timeline-entry right">
+          <div>
+            <span class="timeline-years">1996 &ndash; 2011</span>
+            <span class="timeline-place">Libya</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="timeline-footer">
+        <a href="mailto:petradiyeh@gmail.com">petradiyeh@gmail.com</a>
+      </div>
+
+    </section>
+
+    <footer class="site-footer container" style="background: var(--gray-100);">
+      <span>Petra Radiyeh &copy; 2026</span>
+      <span>All Rights Reserved</span>
+    </footer>
+  </main>
+
+</body>
+</html>

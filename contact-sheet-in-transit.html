@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Sheet — In Transit</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #0a0a0a;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .instructions {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 32px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+    .legend {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+      font-size: 0.75rem;
+      color: #666;
+    }
+    .legend span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .legend .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot.included { background: #22c55e; }
+    .dot.excluded { background: #e5e5e5; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .photo-card {
+      position: relative;
+      border: 2px solid #e5e5e5;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .photo-card.included {
+      border-color: #22c55e;
+    }
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      display: block;
+    }
+    .photo-card .info {
+      padding: 8px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fafafa;
+    }
+    .photo-card .number {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .photo-card .filename {
+      font-size: 0.6rem;
+      color: #999;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .photo-card .status {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .status.in { background: #dcfce7; color: #166534; }
+    .status.out { background: #f5f5f5; color: #999; }
+    .section-divider {
+      grid-column: 1 / -1;
+      padding: 20px 0 8px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #999;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>In Transit — Contact Sheet</h1>
+  <p class="instructions">
+    All 58 In Transit photos numbered for reference. Green border = currently on the website.
+    To make changes, just tell me the numbers, e.g. "add 5, 17, 23" or "remove 8" or "swap 3 and 7" or "move 12 after 6".
+  </p>
+  <div class="legend">
+    <span><span class="dot included"></span> On the website (26 photos)</span>
+    <span><span class="dot excluded"></span> Not included (32 photos)</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="photo-card">
+      <img src="../DSC00296.jpg" loading="lazy">
+      <div class="info"><span class="number">1</span><span class="filename">DSC00296.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC00296-2.jpg" loading="lazy">
+      <div class="info"><span class="number">2</span><span class="filename">DSC00296-2.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC00296-3.jpg" loading="lazy">
+      <div class="info"><span class="number">3</span><span class="filename">DSC00296-3.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC00310.jpg" loading="lazy">
+      <div class="info"><span class="number">4</span><span class="filename">DSC00310.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC00310-2.jpg" loading="lazy">
+      <div class="info"><span class="number">5</span><span class="filename">DSC00310-2.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC00310-3.jpg" loading="lazy">
+      <div class="info"><span class="number">6</span><span class="filename">DSC00310-3.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC00403.jpg" loading="lazy">
+      <div class="info"><span class="number">7</span><span class="filename">DSC00403.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC01104.jpg" loading="lazy">
+      <div class="info"><span class="number">8</span><span class="filename">DSC01104.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC01621.jpg" loading="lazy">
+      <div class="info"><span class="number">9</span><span class="filename">DSC01621.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC01759.jpg" loading="lazy">
+      <div class="info"><span class="number">10</span><span class="filename">DSC01759.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC01782.jpg" loading="lazy">
+      <div class="info"><span class="number">11</span><span class="filename">DSC01782.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC01914.jpg" loading="lazy">
+      <div class="info"><span class="number">12</span><span class="filename">DSC01914.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC01917.jpg" loading="lazy">
+      <div class="info"><span class="number">13</span><span class="filename">DSC01917.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC01933.jpg" loading="lazy">
+      <div class="info"><span class="number">14</span><span class="filename">DSC01933.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC02013.jpg" loading="lazy">
+      <div class="info"><span class="number">15</span><span class="filename">DSC02013.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC02060.jpg" loading="lazy">
+      <div class="info"><span class="number">16</span><span class="filename">DSC02060.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC02066.jpg" loading="lazy">
+      <div class="info"><span class="number">17</span><span class="filename">DSC02066.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC02591.jpg" loading="lazy">
+      <div class="info"><span class="number">18</span><span class="filename">DSC02591.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC02877.jpg" loading="lazy">
+      <div class="info"><span class="number">19</span><span class="filename">DSC02877.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC04271.jpg" loading="lazy">
+      <div class="info"><span class="number">20</span><span class="filename">DSC04271.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC04497.jpg" loading="lazy">
+      <div class="info"><span class="number">21</span><span class="filename">DSC04497.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC04497-2.jpg" loading="lazy">
+      <div class="info"><span class="number">22</span><span class="filename">DSC04497-2.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC04514.jpg" loading="lazy">
+      <div class="info"><span class="number">23</span><span class="filename">DSC04514.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC04523.jpg" loading="lazy">
+      <div class="info"><span class="number">24</span><span class="filename">DSC04523.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC04844.jpg" loading="lazy">
+      <div class="info"><span class="number">25</span><span class="filename">DSC04844.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC04936.jpg" loading="lazy">
+      <div class="info"><span class="number">26</span><span class="filename">DSC04936.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC05152.jpg" loading="lazy">
+      <div class="info"><span class="number">27</span><span class="filename">DSC05152.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC05570.jpg" loading="lazy">
+      <div class="info"><span class="number">28</span><span class="filename">DSC05570.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC05882.jpg" loading="lazy">
+      <div class="info"><span class="number">29</span><span class="filename">DSC05882.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC05909.jpg" loading="lazy">
+      <div class="info"><span class="number">30</span><span class="filename">DSC05909.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC05911.jpg" loading="lazy">
+      <div class="info"><span class="number">31</span><span class="filename">DSC05911.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC05920.jpg" loading="lazy">
+      <div class="info"><span class="number">32</span><span class="filename">DSC05920.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC05934.jpg" loading="lazy">
+      <div class="info"><span class="number">33</span><span class="filename">DSC05934.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC05942.jpg" loading="lazy">
+      <div class="info"><span class="number">34</span><span class="filename">DSC05942.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC05950.jpg" loading="lazy">
+      <div class="info"><span class="number">35</span><span class="filename">DSC05950.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC06040.jpg" loading="lazy">
+      <div class="info"><span class="number">36</span><span class="filename">DSC06040.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC06259.jpg" loading="lazy">
+      <div class="info"><span class="number">37</span><span class="filename">DSC06259.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC06383.jpg" loading="lazy">
+      <div class="info"><span class="number">38</span><span class="filename">DSC06383.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC06462.jpg" loading="lazy">
+      <div class="info"><span class="number">39</span><span class="filename">DSC06462.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC06713.jpg" loading="lazy">
+      <div class="info"><span class="number">40</span><span class="filename">DSC06713.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC06959.jpg" loading="lazy">
+      <div class="info"><span class="number">41</span><span class="filename">DSC06959.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../DSC07325.jpg" loading="lazy">
+      <div class="info"><span class="number">42</span><span class="filename">DSC07325.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../DSC07849.jpg" loading="lazy">
+      <div class="info"><span class="number">43</span><span class="filename">DSC07849.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000255.jpg" loading="lazy">
+      <div class="info"><span class="number">44</span><span class="filename">R0000255.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000256.jpg" loading="lazy">
+      <div class="info"><span class="number">45</span><span class="filename">R0000256.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000278.jpg" loading="lazy">
+      <div class="info"><span class="number">46</span><span class="filename">R0000278.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000293.jpg" loading="lazy">
+      <div class="info"><span class="number">47</span><span class="filename">R0000293.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000308.jpg" loading="lazy">
+      <div class="info"><span class="number">48</span><span class="filename">R0000308.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000346.jpg" loading="lazy">
+      <div class="info"><span class="number">49</span><span class="filename">R0000346.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000389.jpg" loading="lazy">
+      <div class="info"><span class="number">50</span><span class="filename">R0000389.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000401.jpg" loading="lazy">
+      <div class="info"><span class="number">51</span><span class="filename">R0000401.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000442.jpg" loading="lazy">
+      <div class="info"><span class="number">52</span><span class="filename">R0000442.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../R0000451.jpg" loading="lazy">
+      <div class="info"><span class="number">53</span><span class="filename">R0000451.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000453.jpg" loading="lazy">
+      <div class="info"><span class="number">54</span><span class="filename">R0000453.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000517.jpg" loading="lazy">
+      <div class="info"><span class="number">55</span><span class="filename">R0000517.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000555.jpg" loading="lazy">
+      <div class="info"><span class="number">56</span><span class="filename">R0000555.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+    <div class="photo-card included">
+      <img src="../R0000624.jpg" loading="lazy">
+      <div class="info"><span class="number">57</span><span class="filename">R0000624.jpg</span><span class="status in">on site</span></div>
+    </div>
+
+    <div class="photo-card">
+      <img src="../R0000814.jpg" loading="lazy">
+      <div class="info"><span class="number">58</span><span class="filename">R0000814.jpg</span><span class="status out">not used</span></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
